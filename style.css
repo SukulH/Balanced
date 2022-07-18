@@ -1,0 +1,191 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    background-color:#0d0d0d;
+    outline-width: 0.3vh;
+    outline-style: solid;
+    outline-color: #000000;
+    box-shadow: 0px 20px 40px #000000;
+}
+.top_title{
+    cursor: pointer;
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 1s ease 0s;
+}
+body{
+    background-color: #202124;
+    overflow: hidden;
+}
+
+header li,a {
+    font-size: 'Playfair Display', serif;
+    font-weight: 400;
+    font-size: 4vh;
+    color: #ffffff;
+    list-style-type: none;
+    animation: glow 4s linear infinite;
+}
+
+header {
+    display:flex;
+    justify-content: center;
+    padding: 0.5vh 0%;
+    transition: all 1s ease 0s;
+}
+
+.shape{
+    cursor: pointer;
+    background: linear-gradient(64deg, #AEE7F8 23%,#0000FF 140% );
+    animation: wave 30s ease-in-out infinite;
+    box-shadow: 0px 0px 50px #000000;
+    transition: 0.3s ease-in-out;
+}
+.big{
+    width: 20vw;
+    height: 20vw;
+
+}
+.big:hover{
+    width: 25vw;
+    height: 25vw;
+    transition: 0.3s ease;
+    z-index: 2;
+}
+.medium{
+    width: 15vw;
+    height: 15vw;
+
+}
+.medium:hover{
+    width: 20vw;
+    height: 20vw;
+    transition: 0.3s ease;
+    z-index: 2;
+}
+.small{
+    width: 13vw;
+    height: 13vw;
+}
+.small:hover{
+    width: 19vw;
+    height: 19vw;
+    transition: 0.3s ease;
+    z-index: 2;
+}
+.shape:nth-of-type(1) {
+    transform: rotate(90deg);
+    position: absolute;
+    top: 35vh;
+    left:40vw;
+    animation: wave 27s ease-in-out infinite;
+}
+
+.shape:nth-of-type(2) {
+    position: absolute;
+    top: 50%;
+    left:20%;
+    animation: wave 30s ease-in-out infinite;
+}
+
+.shape:nth-of-type(3) {
+    position: absolute;
+    top: 60%;
+    left:60vw;
+  animation: wave 40s ease-in-out infinite;
+}
+
+
+.shape:nth-of-type(4) {
+    position: absolute;
+    top: 20%;
+    left:60vw;
+  animation: wave 25s ease-in-out infinite;
+}
+
+@keyframes wave {
+    0%, 100% {
+        border-radius: 66% 34% 37% 63% / 57% 31% 69% 43%;
+        -ms-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    50%{
+        border-radius: 26% 74% 51% 49% / 22% 53% 47% 78%;
+        -ms-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes glow {
+    0%, 100%{
+        text-shadow: 0 0 15px #e8e8e8;
+    }
+
+    50%{
+        text-shadow: 0 0 3px #e8e8e8;
+    }
+
+}
+.selectedShape{
+    background: linear-gradient(64deg, #AEE7F8 23%,#0000FF 140% );
+    transition: all 0.3s ease-in-out;
+    width: 40vw;
+    height: 40vw;
+    position: absolute;
+    top: 14%;
+    left:3%;
+    animation: wave 30s ease-in-out infinite;
+    box-shadow: 0px 0px 50px #000000;
+    transition: 0.3s ease-in-out;  
+}
+
+@media screen and (orientation:portrait) {
+    body{
+        height: 100vh;
+        width: 100vw;
+    }
+    .big{
+        width: 20vh;
+        height: 20vh;
+    
+    }
+    .medium{
+        width: 15vh;
+        height: 15vh;
+    
+    }
+    .wrapper{
+        display: flex;
+        justify-content: center;
+    }
+    .small{
+        width: 13vh;
+        height: 13vh;
+    }
+    .selectedShapePotrait{
+        display: table;
+        background: linear-gradient(64deg, #AEE7F8 23%,#0000FF 140% );
+        transition: all 0.3s ease-in-out;
+        position: absolute;
+        overflow: hidden;
+        width: 60vw;
+        height: 60vw;
+        top:10vh;
+        animation: wave 30s ease-in-out infinite;
+        box-shadow: 0px 0px 50px #000000;
+        transition: 0.3s ease-in-out;  
+    }
+    
+}
