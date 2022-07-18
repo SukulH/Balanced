@@ -1,0 +1,22 @@
+    if ((shapeArray[i].getBoundingClientRect().top - target.getBoundingClientRect().top) > 0){
+      //objects are below the target.
+
+      shapeArray[i].style.top = "+70vh";
+
+    }else{
+
+      shapeArray[i].style.top = "-30%";
+
+    }
+
+    if ((shapeArray[i].getBoundingClientRect().left - target.getBoundingClientRect().left) > 0){
+      //objects are below the target.
+
+      
+      shapeArray[i].style.left = "+65vw";
+
+    }else{
+
+      shapeArray[i].style.left = "-30%";
+
+    }
